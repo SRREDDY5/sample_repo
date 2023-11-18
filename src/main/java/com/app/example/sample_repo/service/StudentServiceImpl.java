@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.app.example.sample_repo.entity.Student;
 
 @Service
-public class StudentServiceImpl {
+public class StudentServiceImpl implements StudentService {
 
 	List<Student> students = new ArrayList<>();
 

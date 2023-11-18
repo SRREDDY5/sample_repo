@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.example.sample_repo.entity.Student;
-import com.app.example.sample_repo.service.StudentServiceImpl;
+import com.app.example.sample_repo.service.StudentService;
 
 @RestController
 @RequestMapping("/v1")
 public class StudentCtrl {
 
 	@Autowired
-	StudentServiceImpl impl;
+	StudentService impl;
 
 	@GetMapping(value = "/student")
 	public ResponseEntity<List<Student>> getAllStudents() {
