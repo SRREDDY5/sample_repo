@@ -1,10 +1,25 @@
 package com.app.example.sample_repo.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "student")
 public class Student {
 
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	
 	private String name;
+	
 	private String grade;
+	
 	private double fee;
 	
 	public int getId() {
@@ -33,6 +48,9 @@ public class Student {
 	}
 	public Student() {
 		super();
+	}
+	public Student(int id) {
+		this.id = id;
 	}
 	public Student(int id, String name, String grade, double fee) {
 		super();
